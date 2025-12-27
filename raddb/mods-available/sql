@@ -9,4 +9,14 @@ sql {
     radius_db = "radius"
 
     read_clients = yes
+
+    pool {
+        start = 5
+        min = 4
+        max = 10
+        spare = 3
+        uses = 0
+        lifetime = 0
+        idle_timeout = 60
+    }
 }
