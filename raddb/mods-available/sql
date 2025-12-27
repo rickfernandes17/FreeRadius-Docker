@@ -1,0 +1,12 @@
+sql {
+    dialect = "mysql"
+    driver = "rlm_sql_mysql"
+
+    server = "mysql"
+    port = 3306
+    login = "radius"
+    password = "radius"
+    radius_db = "radius"
+
+    read_clients = yes
+}
