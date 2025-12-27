@@ -8,6 +8,23 @@ sql {
     password = "radius"
     radius_db = "radius"
 
+    # Table definitions
+    acct_table1 = "radacct"
+    acct_table2 = "radacct"
+    postauth_table = "radpostauth"
+    authcheck_table = "radcheck"
+    authreply_table = "radreply"
+    groupcheck_table = "radgroupcheck"
+    groupreply_table = "radgroupreply"
+    usergroup_table = "radusergroup"
+    client_table = "nas"
+    group_attribute = "SQL-Group"
+
+    read_groups = yes
+    
+    # Include the default queries
+    $INCLUDE /etc/raddb/mods-config/sql/main/${dialect}/queries.conf
+
     read_clients = yes
 
     pool {

@@ -129,3 +129,9 @@ CREATE TABLE IF NOT EXISTS nasreload (
   reloadtime datetime NOT NULL,
   PRIMARY KEY (nasipaddress)
 ) ENGINE = INNODB;
+
+-- Insert test user
+INSERT INTO radcheck (username, attribute, op, value) VALUES ('bob', 'Cleartext-Password', ':=', 'hello');
+
+-- Insert test NAS (Client)
+INSERT INTO nas (nasname, shortname, type, ports, secret, description) VALUES ('0.0.0.0/0', 'any', 'other', 0, 'testing123', 'Allow any client');
